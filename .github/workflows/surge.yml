@@ -1,4 +1,4 @@
-name: Deployment to Surge
+name: Surge
 
 on: [push]
 
