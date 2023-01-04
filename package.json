@@ -16,6 +16,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.1",
     "htmlhint": "^1.1.4",
+    "pug-lint": "^2.6.0",
+    "pug-lint-config-clock": "^2.0.0",
     "sass": "^1.57.1",
     "stylelint": "^14.2.0",
     "stylelint-config-rational-order": "^0.1.2",

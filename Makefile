@@ -3,7 +3,7 @@ install:
 
 lint:
 	npx stylelint ./app/scss/**/*.scss
-	npx htmlhint ./app/*.html
+	npx pug-lint ./app/**/*.pug
 
 deploy:
 	npx --project ./build --domain https://hex-chat.surge.sh
