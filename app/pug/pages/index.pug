@@ -1,0 +1,17 @@
+//- index.pug
+doctype html
+html(lang='ru')
+
+  //- Подключение head
+  include ../includes/head.pug
+
+  body.p-4.bg-theme-gray
+    .container-xxxl.rounded-4.bg-white
+
+      .row
+        //- Подключение header-desktop
+        include ../includes/header-desktop.pug
+
+      .row
+        aside.col.col-md-4.pt-5.px-4.border-end.border-theme-gray
+        main.col
