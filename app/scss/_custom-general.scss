@@ -1,8 +1,11 @@
-body {
-  height: 100vh;
+header {
+  height: 72px;
 }
 
-header {
-  border-top-left-radius: $border-radius-xl;
-  height: 150px;
+.container-xxxl {
+  min-width: 350px;
+
+  @include media-breakpoint-down(md) {
+    border-radius: 0 !important;
+  }
 }

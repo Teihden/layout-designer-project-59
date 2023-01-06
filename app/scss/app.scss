@@ -1,6 +1,11 @@
 @use "sass:map";
 @import "custom-variables";
+@import "custom-mixins";
 
 // @import "../bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
 @import "custom-general";
+
+@import "./components/avatar";
+@import "./components/contacts";

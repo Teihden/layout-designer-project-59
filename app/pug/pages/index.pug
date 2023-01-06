@@ -5,13 +5,20 @@ html(lang='ru')
   //- Подключение head
   include ../includes/head.pug
 
-  body.p-4.bg-theme-gray
-    .container-xxxl.rounded-4.bg-white
+  body.100-vh.overflow-hidden.p-md-4.bg-theme-gray
+    .container-xxxl.rounded-4.overflow-hidden.bg-white
+
+      //- .row
+      //-   //- Подключение header-desktop
+      //-   //- include ../includes/header-desktop.pug
 
       .row
-        //- Подключение header-desktop
-        include ../includes/header-desktop.pug
-
-      .row
-        aside.col.col-md-4.pt-5.px-4.border-end.border-theme-gray
-        main.col
+        section.col-12.col-md-auto.col-xl-4.p-0.d-flex.flex-column.border-end.border-theme-gray
+          //- Подключение header-desktop
+          include ../includes/header-desktop.pug
+          aside.pt-5.px-4
+            //- Подключение contacts
+            include ../includes/contacts.pug
+        main.col.d-none.d-md-grid
+          //- Подключение contacts
+          include ../includes/avatar.pug

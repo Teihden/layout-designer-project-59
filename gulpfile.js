@@ -9,7 +9,7 @@ const browserSyncJob = () => {
     open: false
   });
 
-  watch("app/scss/*.scss", buildSass);
+  watch("app/scss/**/*.scss", buildSass);
   watch("app/pug/**/*.pug", buildPug);
 };
 

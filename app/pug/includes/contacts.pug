@@ -1,0 +1,55 @@
+//- includes/contacts.pug
+-
+  const contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "./images/avatar_3.jpg"
+    }],
+
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "./images/avatar_4.jpg"
+    }],
+
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "./images/avatar_2.jpg"
+    }],
+
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "./images/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "./images/avatar_5.jpg"
+    }],
+
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "./images/avatar_6.jpg"
+    }],
+  }
+
+h1.h2.mb-3 Контакты
+//- includes/search-panel.pug
+include ./search-panel.pug
+.contacts.mt-5
+  each users, letter in contacts
+    h2.text-muted.h6.m-0= letter
+    each user in users      
+      .card.contact.shadow-sm.border-0.mt-3.mb-5
+        a.text-decoration-none(href='#')
+          .row.m-0
+            .col-auto.ps-3.d-flex.align-items-center
+              img.rounded-circle(src=user.avatar, alt=user.avatar.slice(9))
+            .col
+              .card-body.py-4
+                h3.card-title.h6.fw-bold.m-0= user.name
+                p.text-secondary.small.m-0= user.status

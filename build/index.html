@@ -7,14 +7,91 @@
     <title>Мессенджер «Hexlet Chat» (nyrow)</title>
     <link rel="stylesheet" href="./styles/app.css">
   </head>
-  <body class="p-4 bg-theme-gray">
-    <div class="container-xxxl rounded-4 bg-white">
+  <body class="100-vh overflow-hidden p-md-4 bg-theme-gray">
+    <div class="container-xxxl rounded-4 overflow-hidden bg-white">
       <div class="row">
-        <header class="col-4 border-end border-theme-gray bg-primary"></header>
-      </div>
-      <div class="row">
-        <aside class="col col-md-4 pt-5 px-4 border-end border-theme-gray"></aside>
-        <main class="col"></main>
+        <section class="col-12 col-md-auto col-xl-4 p-0 d-flex flex-column border-end border-theme-gray">
+          <header class="order-1 order-md-0 bg-primary"></header>
+          <aside class="pt-5 px-4">
+            <h1 class="h2 mb-3">Контакты</h1>
+            <div class="input-group">
+              <input class="form-control p-4 border-0 shadow-sm" type="search" placeholder="Поиск по контактам" aria-label="Name" aria-describedby="basic-addon1">
+            </div>
+            <div class="contacts mt-5">
+              <h2 class="text-muted h6 m-0">A</h2>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_3.jpg" alt="avatar_3.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Алексей Примадонин</h3>
+                        <p class="text-secondary small m-0">Онлайн</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+              <h2 class="text-muted h6 m-0">В</h2>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_4.jpg" alt="avatar_4.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Вениамин Редакторович</h3>
+                        <p class="text-secondary small m-0">Онлайн</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+              <h2 class="text-muted h6 m-0">Д</h2>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_2.jpg" alt="avatar_2.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Джедай Падаванов</h3>
+                        <p class="text-secondary small m-0">Был онлайн вчера</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+              <h2 class="text-muted h6 m-0">К</h2>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_1.jpg" alt="avatar_1.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Кодовёнок Хекслетович</h3>
+                        <p class="text-secondary small m-0">Был онлайн 3 часа назад</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_5.jpg" alt="avatar_5.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Королева Верстальщина</h3>
+                        <p class="text-secondary small m-0">Была онлайн вчера</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+              <h2 class="text-muted h6 m-0">П</h2>
+              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                  <div class="row m-0">
+                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_6.jpg" alt="avatar_6.jpg"></div>
+                    <div class="col">
+                      <div class="card-body py-4">
+                        <h3 class="card-title h6 fw-bold m-0">Питонист Джангович</h3>
+                        <p class="text-secondary small m-0">Был онлайн вчера</p>
+                      </div>
+                    </div>
+                  </div></a></div>
+            </div>
+          </aside>
+        </section>
+        <main class="col d-none d-md-grid">
+          <div class="m-auto text-center"><img class="avatar rounded-circle mb-3" src="./images/avatar_1.jpg" alt="avatar_1">
+            <p class="fw-bold text-dark m-0">Привет, Кодовёнок</p>
+            <p class="small text-muted">Выбери чат, чтобы начать общаться</p>
+          </div>
+        </main>
       </div>
     </div>
   </body>

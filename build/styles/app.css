@@ -11776,11 +11776,43 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  height: 100vh;
+header {
+  height: 72px;
 }
 
-header {
-  border-top-left-radius: 1rem;
-  height: 150px;
+.container-xxxl {
+  min-width: 350px;
+}
+@media (max-width: 767.98px) {
+  .container-xxxl {
+    border-radius: 0 !important;
+  }
+}
+
+.contacts {
+  max-height: calc(100vh - 342px);
+}
+@media (max-width: 767.98px) {
+  .contacts {
+    max-height: calc(100vh - 294px);
+  }
+}
+.contacts {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.contacts::-webkit-scrollbar {
+  display: none;
+}
+.contacts img {
+  width: 50px;
+}
+.contacts a {
+  color: inherit;
+}
+.contacts a:hover * {
+  background-color: #4545a5;
+  color: #fbfbfb !important;
 }
