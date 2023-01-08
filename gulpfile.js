@@ -11,6 +11,7 @@ const browserSyncJob = () => {
 
   watch("app/scss/**/*.scss", buildSass);
   watch("app/pug/**/*.pug", buildPug);
+  watch("node_modules/bootstrap/dist/js/bootstrap.min.js", copyFile);
 };
 
 const buildSass = () => {
@@ -28,11 +29,17 @@ const buildPug = () => {
   return src("app/pug/pages/*.pug")
     .pipe(pug({
       pretty: true
-   }))
+    }))
     .pipe(dest("build/"))
     .pipe(browserSync.stream());
 };
 
+const copyFile = () => {
+  return src("node_modules/bootstrap/dist/js/bootstrap.min.js")
+    .pipe(dest("build/js/"));
+};
+
 exports.server = browserSyncJob;
 exports.build = parallel(buildSass, buildPug);
-exports.default = series(parallel(buildSass, buildPug), browserSyncJob);
+exports.copy = copyFile;
+exports.default = series(parallel(buildSass, buildPug), copyFile, browserSyncJob);

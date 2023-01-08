@@ -7,4 +7,4 @@ lint:
 	npx pug-lint ./app/pug/**/*.pug
 
 deploy:
-	npx --project ./build --domain https://hex-chat.surge.sh
+	npx surge --project ./build --domain https://hex-chat.surge.sh

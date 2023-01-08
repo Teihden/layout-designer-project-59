@@ -1,22 +1,9 @@
-.contacts {
-  max-height: calc(100vh - 342px);
+.contact-list {
+  height: calc(100vh - 345px);
 
   @include media-breakpoint-down(md) {
-    max-height: calc(100vh - 294px);
+    height: calc(100vh - 291px);
   }
 
   @include hide-scrollbar;
-
-  img {
-    width: 50px;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a:hover * {
-    background-color: $primary;
-    color: $light !important;
-  }
 }

@@ -19,3 +19,11 @@ make install
 make lint
 make deploy
 ```
+
+## Gulp tasks
+
+```bash
+server
+build
+default
+```

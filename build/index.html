@@ -5,94 +5,160 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мессенджер «Hexlet Chat» (nyrow)</title>
-    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles/app.css">
   </head>
-  <body class="100-vh overflow-hidden p-md-4 bg-theme-gray">
-    <div class="container-xxxl rounded-4 overflow-hidden bg-white">
-      <div class="row">
-        <section class="col-12 col-md-auto col-xl-4 p-0 d-flex flex-column border-end border-theme-gray">
-          <header class="order-1 order-md-0 bg-primary"></header>
-          <aside class="pt-5 px-4">
-            <h1 class="h2 mb-3">Контакты</h1>
-            <div class="input-group">
-              <input class="form-control p-4 border-0 shadow-sm" type="search" placeholder="Поиск по контактам" aria-label="Name" aria-describedby="basic-addon1">
-            </div>
-            <div class="contacts mt-5">
-              <h2 class="text-muted h6 m-0">A</h2>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_3.jpg" alt="avatar_3.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Алексей Примадонин</h3>
-                        <p class="text-secondary small m-0">Онлайн</p>
+  <body class="vh-100 p-md-4 bg-theme-gray">
+    <div class="container-xxxl rounded-md-4 overflow-hidden bg-white h-100">
+      <div class="row h-100">
+        <aside class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4 p-0 d-flex flex-column justify-content-between justify-content-md-start border-end border-theme-gray h-100">
+          <header class="order-last order-md-first d-flex align-items-center py-3 px-3 bg-primary"><a class="logo d-grid" href="#"><img class="m-auto" src="images/icons/logo.svg" alt="logo" width="14" height="auto"></a>
+            <nav class="ms-auto">
+              <ul class="nav nav-tabs justify-content-end border-0" role="tablist">
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="true"><img class="me-2" src="images/icons/people.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Контакты</span></button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#chats" type="button" role="tab" aria-controls="chats" aria-selected="false"><img class="me-2" src="images/icons/chat.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Сообщения</span></button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><img class="me-2" src="images/icons/person.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Профиль</span></button>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <section class="tab-content pt-5 px-4">
+            <section class="tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0">
+              <h1 class="h2 mb-3">Контакты</h1>
+              <div class="input-group">
+                <input class="form-control p-4 border-0 shadow-sm" type="search" placeholder="Поиск по контактам" aria-label="Name" aria-describedby="basic-addon1">
+              </div>
+              <div class="contact-list mt-5">
+                <h2 class="text-muted h6 m-0">A</h2>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_3.jpg" alt="atar_3.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Алексей Примадонин</h3>
+                          <p class="text-secondary small m-0">Онлайн</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-              <h2 class="text-muted h6 m-0">В</h2>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_4.jpg" alt="avatar_4.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Вениамин Редакторович</h3>
-                        <p class="text-secondary small m-0">Онлайн</p>
+                    </div></a></div>
+                <h2 class="text-muted h6 m-0">В</h2>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="atar_4.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Вениамин Редакторович</h3>
+                          <p class="text-secondary small m-0">Онлайн</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-              <h2 class="text-muted h6 m-0">Д</h2>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_2.jpg" alt="avatar_2.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Джедай Падаванов</h3>
-                        <p class="text-secondary small m-0">Был онлайн вчера</p>
+                    </div></a></div>
+                <h2 class="text-muted h6 m-0">Д</h2>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_2.jpg" alt="atar_2.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Джедай Падаванов</h3>
+                          <p class="text-secondary small m-0">Был онлайн вчера</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-              <h2 class="text-muted h6 m-0">К</h2>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_1.jpg" alt="avatar_1.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Кодовёнок Хекслетович</h3>
-                        <p class="text-secondary small m-0">Был онлайн 3 часа назад</p>
+                    </div></a></div>
+                <h2 class="text-muted h6 m-0">К</h2>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_1.jpg" alt="atar_1.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Кодовёнок Хекслетович</h3>
+                          <p class="text-secondary small m-0">Был онлайн 3 часа назад</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_5.jpg" alt="avatar_5.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Королева Верстальщина</h3>
-                        <p class="text-secondary small m-0">Была онлайн вчера</p>
+                    </div></a></div>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_5.jpg" alt="atar_5.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Королева Верстальщина</h3>
+                          <p class="text-secondary small m-0">Была онлайн вчера</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-              <h2 class="text-muted h6 m-0">П</h2>
-              <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
-                  <div class="row m-0">
-                    <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="./images/avatar_6.jpg" alt="avatar_6.jpg"></div>
-                    <div class="col">
-                      <div class="card-body py-4">
-                        <h3 class="card-title h6 fw-bold m-0">Питонист Джангович</h3>
-                        <p class="text-secondary small m-0">Был онлайн вчера</p>
+                    </div></a></div>
+                <h2 class="text-muted h6 m-0">П</h2>
+                <div class="card contact shadow-sm border-0 mt-3 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_6.jpg" alt="atar_6.jpg" width="50"></div>
+                      <div class="col pe-4">
+                        <div class="card-body py-4 ps-0">
+                          <h3 class="card-title h6 fw-bold m-0">Питонист Джангович</h3>
+                          <p class="text-secondary small m-0">Был онлайн вчера</p>
+                        </div>
                       </div>
-                    </div>
-                  </div></a></div>
-            </div>
-          </aside>
-        </section>
-        <main class="col d-none d-md-grid">
-          <div class="m-auto text-center"><img class="avatar rounded-circle mb-3" src="./images/avatar_1.jpg" alt="avatar_1">
+                    </div></a></div>
+              </div>
+            </section>
+            <section class="tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab" tabindex="0">
+              <h1 class="h2 mb-3">Чаты</h1>
+              <div class="input-group">
+                <input class="form-control p-4 border-0 shadow-sm" type="search" placeholder="Поиск по контактам" aria-label="Name" aria-describedby="basic-addon1">
+              </div>
+              <div class="chat-list mt-5">
+                <div class="card chat shadow-sm border-0 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0 flex-nowrap">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="atar_4.jpg" width="50"></div>
+                      <div class="col pe-4 overflow-hidden">
+                        <div class="card-body py-4 ps-0">
+                          <div class="d-flex justify-content-between">
+                            <h3 class="card-title h6 fw-bold m-0">Вениамин Редакторович</h3>
+                            <p class="text-secondary small m-0">11:45</p>
+                          </div>
+                          <p class="text-secondary small text-truncate m-0">o_O</p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="card chat shadow-sm border-0 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0 flex-nowrap">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_2.jpg" alt="atar_2.jpg" width="50"></div>
+                      <div class="col pe-4 overflow-hidden">
+                        <div class="card-body py-4 ps-0">
+                          <div class="d-flex justify-content-between">
+                            <h3 class="card-title h6 fw-bold m-0">Джедай Падаванов</h3>
+                            <p class="text-secondary small m-0">10:12</p>
+                          </div>
+                          <p class="text-secondary small text-truncate m-0">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="card chat shadow-sm border-0 mb-5"><a class="text-decoration-none" href="#">
+                    <div class="row m-0 flex-nowrap">
+                      <div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_3.jpg" alt="atar_3.jpg" width="50"></div>
+                      <div class="col pe-4 overflow-hidden">
+                        <div class="card-body py-4 ps-0">
+                          <div class="d-flex justify-content-between">
+                            <h3 class="card-title h6 fw-bold m-0">Алексей Примадонин</h3>
+                            <p class="text-secondary small m-0">08:53</p>
+                          </div>
+                          <p class="text-secondary small text-truncate m-0">Тесты упали &gt;_&lt;</p>
+                        </div>
+                      </div>
+                    </div></a></div>
+              </div>
+            </section>
+            <section class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"></section>
+          </section>
+        </aside>
+        <main class="col d-none d-md-grid h-100">
+          <div class="m-auto text-center"><img class="avatar rounded-circle mb-3" src="images/avatar_1.jpg" alt="avatar_1" width="200">
             <p class="fw-bold text-dark m-0">Привет, Кодовёнок</p>
             <p class="small text-muted">Выбери чат, чтобы начать общаться</p>
           </div>
         </main>
       </div>
     </div>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

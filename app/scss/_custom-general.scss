@@ -1,11 +1,40 @@
 header {
-  height: 72px;
+  .logo {
+    width: 25px;
+    height: 40px;
+  }
 }
 
 .container-xxxl {
   min-width: 350px;
+}
+
+header {
+  img {
+    filter: invert(1);
+  }
+}
+
+header .nav-tabs {
+  --bs-nav-tabs-link-active-bg: none;
+  --bs-nav-tabs-border-width: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover * {
+  background-color: $primary;
+  color: $light !important;
+}
+
+.chat-list {
+  height: calc(100vh - 345px);
 
   @include media-breakpoint-down(md) {
-    border-radius: 0 !important;
+    height: calc(100vh - 291px);
   }
+
+  @include hide-scrollbar;
 }
