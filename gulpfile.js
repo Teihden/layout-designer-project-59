@@ -11,7 +11,8 @@ const browserSyncJob = () => {
 
   watch("app/scss/**/*.scss", buildSass);
   watch("app/pug/**/*.pug", buildPug);
-  watch("node_modules/bootstrap/dist/js/bootstrap.min.js", copyFile);
+  watch("node_modules/bootstrap/dist/js/bootstrap.min.js", copyBootstrapJS);
+  watch(["node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff", "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"], copyBootstrapIcons);
 };
 
 const buildSass = () => {
@@ -34,12 +35,17 @@ const buildPug = () => {
     .pipe(browserSync.stream());
 };
 
-const copyFile = () => {
+const copyBootstrapJS = () => {
   return src("node_modules/bootstrap/dist/js/bootstrap.min.js")
     .pipe(dest("build/js/"));
 };
 
+const copyBootstrapIcons = () => {
+  return src(["node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff", "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"])
+    .pipe(dest("build/fonts/"));
+};
+
 exports.server = browserSyncJob;
 exports.build = parallel(buildSass, buildPug);
-exports.copy = copyFile;
-exports.default = series(parallel(buildSass, buildPug), copyFile, browserSyncJob);
+exports.copy = parallel(copyBootstrapJS, copyBootstrapIcons);
+exports.default = series(parallel(buildSass, buildPug), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);

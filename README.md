@@ -25,5 +25,6 @@ make deploy
 ```bash
 server
 build
+copy
 default
 ```
