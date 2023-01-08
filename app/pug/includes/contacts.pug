@@ -42,8 +42,7 @@ section.tab-pane.fade.show.active.h-100#contacts(role='tabpanel', aria-labelledb
     header
       h1.h2.mb-3 Контакты
 
-      //- includes/search-panel.pug
-      include ./search-panel.pug
+      +search-panel('Поиск по контактам')
   
     .contact-list.hide-scrollbar 
       each users, letter in contacts

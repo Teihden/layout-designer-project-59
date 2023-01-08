@@ -26,8 +26,7 @@ section.tab-pane.h-100.fade#chats(role='tabpanel', aria-labelledby='chats-tab', 
     header  
       h1.h2.mb-3 Чаты
 
-      //- includes/search-panel.pug
-      include ./search-panel.pug
+      +search-panel('Поиск по сообщениям')
 
     .chat-list.hide-scrollbar 
       each chat in chats    

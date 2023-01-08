@@ -4,8 +4,7 @@ section.tab-pane.h-100.fade#profile(role='tabpanel', aria-labelledby='profile-ta
     header
       h1.h2.mb-3 Профиль
 
-      //- includes/search-panel.pug
-      include ./search-panel.pug
+      +search-panel('Поиск по сообщениям')
 
     .profile.hide-scrollbar 
       .card.align-items-center.text-center.py-4.mb-5.border-0    
