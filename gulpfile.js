@@ -19,7 +19,9 @@ const buildSass = () => {
   console.log("Компиляция SASS");
 
   return src("app/scss/*.scss")
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: "expanded"
+    }))
     .pipe(dest("build/styles/"))
     .pipe(browserSync.stream());
 };

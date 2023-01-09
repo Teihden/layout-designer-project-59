@@ -65,6 +65,11 @@ $custom-grid-breakpoints: map-merge($theme-colors, $custom-grid-breakpoints);
 
 // Custom utilites
 $utilities: map.set($utilities, "rounded", responsive, true);
+$utilities: map.set($utilities, "border", responsive, true);
+$utilities: map.set($utilities, "border-top", responsive, true);
+$utilities: map.set($utilities, "border-end", responsive, true);
+$utilities: map.set($utilities, "border-bottom", responsive, true);
+$utilities: map.set($utilities, "border-start", responsive, true);
 // @import "custom-utilities/borders";
 
 // Bootstrap utilities API
