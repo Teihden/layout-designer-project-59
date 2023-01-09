@@ -3,7 +3,7 @@ install:
 
 lint:
 	npx stylelint ./app/scss/**/*.scss
-	npx htmlhint ./app/*.html
+	npx htmlhint ./build/*.html
 	npx pug-lint ./app/pug/**/*.pug
 
 deploy:

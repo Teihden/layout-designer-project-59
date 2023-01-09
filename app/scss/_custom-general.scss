@@ -1,7 +1,16 @@
-header {
+.header-page {
   .logo {
     width: 25px;
     height: 40px;
+  }
+
+  .nav-tabs {
+    --bs-nav-tabs-link-active-bg: none;
+    --bs-nav-tabs-border-width: 0;
+  }
+
+  img {
+    filter: invert(1);
   }
 }
 
@@ -9,24 +18,13 @@ header {
   min-width: 350px;
 }
 
-header {
-  img {
-    filter: invert(1);
-  }
-}
-
-header .nav-tabs {
-  --bs-nav-tabs-link-active-bg: none;
-  --bs-nav-tabs-border-width: 0;
-}
-
 a {
   color: inherit;
-}
 
-a:hover * {
-  background-color: $primary;
-  color: $light !important;
+  &:hover * {
+    background-color: $primary;
+    color: $light !important;
+  }
 }
 
 .hide-scrollbar {

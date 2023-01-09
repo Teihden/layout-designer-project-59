@@ -16101,28 +16101,25 @@ textarea.form-control-lg {
   content: "\f8cc";
 }
 
-header .logo {
+.header-page .logo {
   width: 25px;
   height: 40px;
+}
+.header-page .nav-tabs {
+  --bs-nav-tabs-link-active-bg: none;
+  --bs-nav-tabs-border-width: 0;
+}
+.header-page img {
+  filter: invert(1);
 }
 
 .container-xxxl {
   min-width: 350px;
 }
 
-header img {
-  filter: invert(1);
-}
-
-header .nav-tabs {
-  --bs-nav-tabs-link-active-bg: none;
-  --bs-nav-tabs-border-width: 0;
-}
-
 a {
   color: inherit;
 }
-
 a:hover * {
   background-color: #4545a5;
   color: #fbfbfb !important;
