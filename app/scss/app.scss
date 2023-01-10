@@ -11,7 +11,10 @@
 
 // Custom variables merge
 $theme-colors: map.merge($theme-colors, $custom-colors);
-$container-max-widths: map.merge($container-max-widths, $custom-container-max-widths);
+$container-max-widths: map.merge(
+  $container-max-widths,
+  $custom-container-max-widths
+);
 $grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
 
 // Required Bootstrap components
@@ -62,13 +65,7 @@ $grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
 @import "../../node_modules/bootstrap/scss/helpers";
 
 // Custom utilites
-$utilities: map.set($utilities, "rounded", responsive, true);
-$utilities: map.set($utilities, "border", responsive, true);
-$utilities: map.set($utilities, "border-top", responsive, true);
-$utilities: map.set($utilities, "border-end", responsive, true);
-$utilities: map.set($utilities, "border-bottom", responsive, true);
-$utilities: map.set($utilities, "border-start", responsive, true);
-$utilities: map.set($utilities, "opacity", values, 60, 0.6);
+@import "custom-utilities";
 
 // Bootstrap utilities API
 @import "../../node_modules/bootstrap/scss/utilities/api";
