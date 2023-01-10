@@ -3,7 +3,7 @@ header.me-4
   .card.chat.shadow-none.border-theme-gray.border-top-0.border-start-0.border-end-0
     .row.m-0
       .col-auto.ps-3.d-flex.align-items-center
-        img.rounded-circle(src= messages.partner1.avatar, alt= messages.partner1.avatar.slice(9), width='50')
+        img.rounded-circle(src= messages.partner1.avatar, alt= messages.partner1.avatar.slice(7, 15), width='50')
       .col.py-4
         .card-body.p-0
           h3.card-title.h6.lh-base.fw-bold.m-0= messages.partner1.name
@@ -14,7 +14,7 @@ header.me-4
     .card.border-0(class= message.layout)
       .row.m-0.gap-3
         .col-auto.p-0.d-none.d-md-flex
-          img.rounded-circle.mt-auto(src= message.avatar, alt= message.avatar.slice(9), width='50')
+          img.rounded-circle.mt-auto(src= message.avatar, alt= message.avatar.slice(7, 15), width='50')
         .col.message-balloon.p-4.shadow-sm.rounded-4(class= message.background)
           .card-body.p-0.d-flex.flex-column.gap-1.mb-2
             if message.name !== null
