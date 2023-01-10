@@ -1,7 +1,15 @@
+//- index.pug
+-
+  const url = 'index'
+  
+  const active = {
+    contacts: ["show active"],
+    chats: null
+  }
+
 //- Подключение mixins
 include ../includes/mixins.pug
 
-//- index.pug
 doctype html
 html.h-100(lang='ru')
 
@@ -10,23 +18,32 @@ html.h-100(lang='ru')
 
   body.h-100.p-md-4.bg-theme-gray
     .container-xxxl.rounded-md-4.bg-white.h-100.overflow-hidden
-
-      //- .row
-      //-   //- Подключение header-page
-      //-   //- include ../includes/header-page.pug
-
       .row.h-100
-        aside.col-sm-12.col-md-auto.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.border-theme-gray.h-100
+        aside.col-sm-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.border-theme-gray.h-100
+          
           //- Подключение header-page
           include ../includes/header-page.pug
-          .tab-content.pt-5.px-4.h-100.overflow-hidden
-            //- Подключение contacts
-            include ../includes/contacts.pug
-            //- Подключение chats
-            include ../includes/chats.pug
-            //- Подключение profile
-            include ../includes/profile.pug
-        main.col.d-none.d-md-grid.h-100
+
+          .tab-content.h-100.overflow-hidden
+            
+            section.tab-pane.fade.pt-5.px-4.h-100#contacts(class= active.contacts, role='tabpanel', aria-labelledby='contacts-tab', tabindex='0')
+
+              //- Подключение contacts
+              include ../includes/contacts.pug
+            
+            section.tab-pane.fade.pt-5.px-4.h-100#chats(class= active.chats, role='tabpanel', aria-labelledby='chats-tab', tabindex='0')
+            
+              //- Подключение chats
+              include ../includes/chats.pug
+
+            section.tab-pane.fade.pt-5.px-4.h-100#profile(role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+            
+              //- Подключение profile
+              include ../includes/profile.pug
+
+        main.col.d-none.d-md-flex.flex-column.h-100.p-0
+          
           //- Подключение avatar
           include ../includes/avatar.pug
+
     script(src='js/bootstrap.min.js')

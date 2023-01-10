@@ -1,6 +1,105 @@
 //- chat.pug
+-
+  const url = 'chat'
+  
+  const active = {
+    contacts: null,
+    chats: ["show active"]
+  }
+
+  const messages = {
+    partner1: {
+      name: "Вениамин Редакторович",
+      time: "8 минут назад",
+      text: "Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?",
+      color: "text-secondary",
+      avatar: "images/avatar_4.jpg",
+      layout: "align-self-start",
+      background: "bg-light"
+    },
+    user1: {
+      name: null,
+      time: "8 минут назад",
+      text: "Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень",
+      color: "text-light",
+      avatar: "images/avatar_1.jpg",
+      layout: "align-self-end",
+      background: "bg-primary"
+    },
+    partner2: {
+      name: "Вениамин Редакторович",
+      time: "5 минут назад",
+      text: "Лады",
+      color: "text-secondary",
+      avatar: "images/avatar_4.jpg",
+      layout: "align-self-start",
+      background: "bg-light"
+    },
+    user2: {
+      name: null,
+      time: "5 минут назад",
+      text: "А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие",
+      color: "text-light",
+      avatar: "images/avatar_1.jpg",
+      layout: "align-self-end",
+      background: "bg-primary"
+    },
+    partner3: {
+      name: "Вениамин Редакторович",
+      time: "Только что",
+      text: "о_О",
+      color: "text-secondary",
+      avatar: "images/avatar_4.jpg",
+      layout: "align-self-start",
+      background: "bg-light"
+    }
+  }
+
+//- Подключение mixins
+include ../includes/mixins.pug
+
 doctype html
-html(lang='ru')
+html.h-100(lang='ru')
 
   //- Подключение head
   include ../includes/head.pug
+
+  body.h-100.p-md-4.bg-theme-gray
+    .container-xxxl.rounded-md-4.bg-white.h-100.overflow-hidden
+      .row.h-100
+        aside.col-sm-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.border-theme-gray.h-100
+          
+          //- Подключение header-page
+          include ../includes/header-page.pug
+
+          .tab-content.h-100.overflow-hidden
+            
+            section.tab-pane.fade.pt-5.px-4.h-100#contacts(class= active.contacts, role='tabpanel', aria-labelledby='contacts-tab', tabindex='0')
+
+              //- Подключение contacts
+              include ../includes/contacts.pug
+            
+            section.tab-pane.fade.pt-5.px-4.h-100#chats(class= active.chats, role='tabpanel', aria-labelledby='chats-tab', tabindex='0')
+            
+              //- Подключение chats
+              include ../includes/chats.pug
+
+            section.tab-pane.fade.pt-5.px-4.h-100#profile(role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+            
+              //- Подключение profile
+              include ../includes/profile.pug
+
+            section.tab-pane.fade.d-md-none.h-100#current-chat(role='tabpanel', aria-labelledby='current-chat-tab', tabindex='0')
+              .d-flex.flex-column.h-100
+
+                //- Подключение current-chat
+                include ../includes/current-chat.pug
+                +message-input('message-button-1')
+
+        main.col.d-none.d-md-flex.flex-column.h-100.p-0
+          
+          //- Подключение current-chat
+          include ../includes/current-chat.pug
+          +message-input('message-button-2')
+
+    script(src='js/bootstrap.min.js')

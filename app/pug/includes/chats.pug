@@ -21,23 +21,20 @@
     },
   ]
 
-section.tab-pane.h-100.fade#chats(role='tabpanel', aria-labelledby='chats-tab', tabindex='0')
-  .d-grid.h-100
-    header  
-      h1.h2.mb-3 Чаты
-
-      +search-panel('Поиск по сообщениям')
-
-    .chat-list.hide-scrollbar 
-      each chat in chats    
-        .card.chat.shadow-sm.border-0.mb-5
-          a.text-decoration-none(href='#')
-            .row.m-0.flex-nowrap
-              .col-auto.ps-3.d-flex.align-items-center
-                img.rounded-circle(src=chat.avatar, alt=chat.avatar.slice(9), width='50')
-              .col.pe-4.overflow-hidden
-                .card-body.py-4.ps-0
-                  .d-flex.justify-content-between
-                    h3.card-title.h6.fw-bold.m-0= chat.name
-                    p.text-secondary.small.m-0= chat.time
-                  p.text-secondary.small.text-truncate.m-0= chat.message
+.d-flex.flex-column.h-100
+  header  
+    h1.h2.mb-3 Чаты
+    +search-panel('Поиск по сообщениям')
+  .chat-list.hide-scrollbar 
+    each chat in chats    
+      .card.shadow-sm.border-0.mb-5
+        a.text-decoration-none(href='#')
+          .row.m-0.flex-nowrap
+            .col-auto.ps-3.d-flex.align-items-center
+              img.rounded-circle(src=chat.avatar, alt=chat.avatar.slice(9), width='50')
+            .col.pe-4.overflow-hidden
+              .card-body.py-4.ps-0
+                .d-flex.justify-content-between
+                  h3.card-title.h6.lh-base.fw-bold.m-0= chat.name
+                  p.text-secondary.small.m-0= chat.time
+                p.text-secondary.small.text-truncate.m-0= chat.message

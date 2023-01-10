@@ -37,23 +37,20 @@
     }],
   }
 
-section.tab-pane.fade.show.active.h-100#contacts(role='tabpanel', aria-labelledby='contacts-tab', tabindex='0')
-  .d-grid.h-100
-    header
-      h1.h2.mb-3 Контакты
-
-      +search-panel('Поиск по контактам')
-  
-    .contact-list.hide-scrollbar 
-      each users, letter in contacts
-        h2.text-muted.h6.m-0= letter
-        each user in users      
-          .card.contact.shadow-sm.border-0.mt-3.mb-5
-            a.text-decoration-none(href='#')
-              .row.m-0
-                .col-auto.ps-3.d-flex.align-items-center
-                  img.rounded-circle(src=user.avatar, alt=user.avatar.slice(9), width='50')
-                .col.pe-4
-                  .card-body.py-4.ps-0
-                    h3.card-title.h6.fw-bold.m-0= user.name
-                    p.text-secondary.small.m-0= user.status
+.d-flex.flex-column.h-100
+  header
+    h1.h2.mb-3 Контакты
+    +search-panel('Поиск по контактам') 
+  .contact-list.hide-scrollbar 
+    each users, letter in contacts
+      h2.text-muted.h6.m-0= letter
+      each user in users      
+        .card.shadow-sm.border-0.mt-3.mb-5
+          a.text-decoration-none(href='#')
+            .row.m-0
+              .col-auto.ps-3.d-flex.align-items-center
+                img.rounded-circle(src=user.avatar, alt=user.avatar.slice(9), width='50')
+              .col.pe-4
+                .card-body.py-4.ps-0
+                  h3.card-title.h6.lh-base.fw-bold.m-0= user.name
+                  p.text-secondary.small.m-0= user.status
