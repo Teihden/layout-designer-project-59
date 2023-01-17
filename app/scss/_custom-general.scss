@@ -12,23 +12,16 @@
   img {
     filter: invert(1);
   }
-
-  a {
-    cursor: pointer;
-  }
 }
 
 .container-xxxl {
   min-width: 350px;
 }
 
-.tab-content a {
-  color: inherit;
-
-  &:hover * {
-    background-color: $primary;
-    color: $light !important;
-  }
+.tab-content a:hover *,
+.tab-content a:focus * {
+  background-color: $primary;
+  color: $light !important;
 }
 
 .hide-scrollbar {

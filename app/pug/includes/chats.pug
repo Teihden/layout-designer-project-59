@@ -5,36 +5,38 @@
       name: "Вениамин Редакторович",
       time: "11:45",
       message: "o_O",
-      avatar: "images/avatar_4.jpg"
+      avatar: "images/avatar_4.jpg",
+      link: "chat.html"
     },
     {
       name: "Джедай Падаванов",
       time: "10:12",
       message: "Привет, скоро третий проект? Уже скоро надо будет выложить",
-      avatar: "images/avatar_2.jpg"
+      avatar: "images/avatar_2.jpg",
+      link: "#"
     },
     {
       name: "Алексей Примадонин",
       time: "08:53",
       message: "Тесты упали >_<",
-      avatar: "images/avatar_3.jpg"
+      avatar: "images/avatar_3.jpg",
+      link: "#"
     },
   ]
 
-.d-flex.flex-column.h-100
-  header  
-    h1.h2.fw-bold.mb-4 Чаты
-    +search-panel('Поиск по сообщениям')
-  .chat-list.hide-scrollbar 
-    each chat in chats    
-      .card.shadow-sm.border-0.mb-3
-        a.text-decoration-none(href='#')
-          .row.m-0.flex-nowrap
-            .col-auto.ps-3.d-flex.align-items-center
-              img.rounded-circle(src=chat.avatar, alt=chat.avatar.slice(7, 15), width='50')
-            .col.pe-4.overflow-hidden
-              .card-body.py-4.ps-0
-                .d-flex.justify-content-between
-                  h3.card-title.h6.lh-base.fw-bold.m-0= chat.name
-                  p.text-secondary.small.m-0= chat.time
-                p.text-secondary.small.text-truncate.m-0= chat.message
+header
+  h2.fw-bold.mb-4 Чаты
+  +search-panel('Поиск по сообщениям')
+.chat-list.hide-scrollbar
+  each chat in chats
+    .card.shadow-sm.border-0.mb-3
+      a.text-decoration-none(href= chat.link)
+        .row.m-0.flex-nowrap
+          .col-auto.ps-3.d-flex.align-items-center
+            img.rounded-circle(src= chat.avatar, alt= chat.avatar.slice(7, 15), width='50')
+          .col.pe-4.overflow-hidden
+            .card-body.py-4.ps-0
+              .d-flex.justify-content-between
+                .card-title.fw-bold.text-900.m-0= chat.name
+                .text-secondary.small= chat.time
+              p.text-secondary.small.text-truncate.m-0= chat.message

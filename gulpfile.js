@@ -22,7 +22,7 @@ const buildSass = () => {
     .pipe(sass({
       outputStyle: "expanded"
     }))
-    .pipe(dest("build/styles/"))
+    .pipe(dest("build/css/"))
     .pipe(browserSync.stream());
 };
 
@@ -31,7 +31,8 @@ const buildPug = () => {
 
   return src("app/pug/pages/*.pug")
     .pipe(pug({
-      pretty: true
+      pretty: true,
+      doctype: "html"
     }))
     .pipe(dest("build/"))
     .pipe(browserSync.stream());

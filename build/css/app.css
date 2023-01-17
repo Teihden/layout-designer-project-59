@@ -5292,6 +5292,51 @@ textarea.form-control-lg {
   color: inherit !important;
 }
 
+.text-100 {
+  --bs-text-opacity: 1;
+  color: #f8f9fa !important;
+}
+
+.text-200 {
+  --bs-text-opacity: 1;
+  color: #e9ecef !important;
+}
+
+.text-300 {
+  --bs-text-opacity: 1;
+  color: #dee2e6 !important;
+}
+
+.text-400 {
+  --bs-text-opacity: 1;
+  color: #ced4da !important;
+}
+
+.text-500 {
+  --bs-text-opacity: 1;
+  color: #adb5bd !important;
+}
+
+.text-600 {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+}
+
+.text-700 {
+  --bs-text-opacity: 1;
+  color: #495057 !important;
+}
+
+.text-800 {
+  --bs-text-opacity: 1;
+  color: #343a40 !important;
+}
+
+.text-900 {
+  --bs-text-opacity: 1;
+  color: #212529 !important;
+}
+
 .text-opacity-25 {
   --bs-text-opacity: 0.25;
 }
@@ -16860,18 +16905,13 @@ textarea.form-control-lg {
 .header-page img {
   filter: invert(1);
 }
-.header-page a {
-  cursor: pointer;
-}
 
 .container-xxxl {
   min-width: 350px;
 }
 
-.tab-content a {
-  color: inherit;
-}
-.tab-content a:hover * {
+.tab-content a:hover *,
+.tab-content a:focus * {
   background-color: #4545a5;
   color: #fbfbfb !important;
 }

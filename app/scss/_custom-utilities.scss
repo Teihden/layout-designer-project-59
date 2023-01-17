@@ -34,5 +34,14 @@ $utilities: map.merge(
         ),
       ),
     ),
+    "color": map.merge(
+      map.get($utilities, "color"),
+      (
+        values: map.merge(
+          map.get(map.get($utilities, "color"), "values"),
+          $grays,
+        ),
+      ),
+    ),
   )
 );
