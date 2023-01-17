@@ -1,5 +1,6 @@
 //- includes/current-chat.pug
 header.me-4.pos
+  h2.visually-hidden Чат
   .card.chat.shadow-none.border-theme-gray.border-top-0.border-start-0.border-end-0
     .row.m-0
       .col-auto.ps-3.d-flex.align-items-center
@@ -7,7 +8,7 @@ header.me-4.pos
       .col.py-4
         .card-body.p-0
           .card-title.fw-bold.m-0= messages.partner1.name
-          .text-secondary.small Онлайн
+          .text-secondary.small.m-0 Онлайн
 
 .message-list.ps-5.pe-5.pt-5.d-flex.flex-column.gap-3.hide-scrollbar
   each message in messages
