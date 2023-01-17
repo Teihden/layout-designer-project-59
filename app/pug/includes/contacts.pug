@@ -48,7 +48,7 @@ header
   +search-panel('Поиск по контактам')
 .contact-list
   each users, letter in contacts
-    .text-muted.mt-3.mb-5= letter
+    .text-muted.mt-5.mb-3= letter
     each user in users
       .card.shadow-sm.border-0
         a.text-decoration-none(href= user.link)
