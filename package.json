@@ -15,6 +15,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^5.0.0",
+    "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.1",
     "htmlhint": "^1.1.4",

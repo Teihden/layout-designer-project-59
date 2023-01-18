@@ -2,6 +2,7 @@ const { src, dest, parallel, series, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const pug = require("gulp-pug");
 const browserSync = require("browser-sync").create();
+const purgecss = require('gulp-purgecss');
 
 const browserSyncJob = () => {
   browserSync.init({
@@ -22,8 +23,19 @@ const buildSass = () => {
     .pipe(sass({
       outputStyle: "expanded"
     }))
-    .pipe(dest("build/css/"))
+    .pipe(dest("app/css/"))
     .pipe(browserSync.stream());
+};
+
+const purgeCSS = () => {
+  console.log("запуск PurgeCSS");
+
+  return src("app/css/*.css")
+  .pipe(purgecss({
+    content: ["build/*.html"],
+    variables: true
+}))
+.pipe(dest('build/css'))
 };
 
 const buildPug = () => {
@@ -49,6 +61,6 @@ const copyBootstrapIcons = () => {
 };
 
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug);
+exports.build = parallel(series(buildSass, purgeCSS), buildPug);
 exports.copy = parallel(copyBootstrapJS, copyBootstrapIcons);
-exports.default = series(parallel(buildSass, buildPug), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);
+exports.default = series(parallel(series(buildSass, purgeCSS), buildPug), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);
