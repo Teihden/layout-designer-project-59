@@ -16912,15 +16912,15 @@ textarea.form-control-lg {
 
 .tab-content a:hover *,
 .tab-content a:focus * {
+  color: #fbfbfb;
   background-color: #4545a5;
-  color: #fbfbfb !important;
 }
 
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

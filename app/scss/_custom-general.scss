@@ -20,12 +20,13 @@
 
 .tab-content a:hover *,
 .tab-content a:focus * {
+  color: $light;
   background-color: $primary;
-  color: $light !important;
+
 }
 
 .hide-scrollbar {
-  @include hide-scrollbar;
+  @include hide-scrollbar();
 }
 
 .btn-message {

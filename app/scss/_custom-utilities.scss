@@ -30,7 +30,7 @@ $utilities: map.merge(
       (
         values: map.merge(
           map.get(map.get($utilities, "opacity"), "values"),
-          ( 60: 0.6, ),
+          ( 60: .6, ),
         ),
       ),
     ),
