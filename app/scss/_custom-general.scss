@@ -22,11 +22,10 @@
 .tab-content a:focus * {
   color: $light;
   background-color: $primary;
-
 }
 
 .hide-scrollbar {
-  @include hide-scrollbar();
+  @include hide-scrollbar;
 }
 
 .btn-message {
