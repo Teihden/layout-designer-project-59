@@ -16,14 +16,14 @@ make install
 
 ## CLI
 
-```bash
+```shell
 # Runs Stylelint, pug-lint against source code for quality
 make lint
 ```
 
 ## Gulp tasks
 
-```bash
+```shell
 # Starts Browsersync server and watch Sass, Pug and Bootstrap files (icons, JS) for changes
 server
 
