@@ -49,4 +49,4 @@ $grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // Custom SASS
-@import "custom-general";
+@import "custom-main";

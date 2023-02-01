@@ -1,4 +1,4 @@
-.header-page {
+.page-header {
   .logo {
     width: 25px;
     height: 40px;
@@ -18,9 +18,9 @@
   min-width: 350px;
 }
 
-.tab-content a:hover *,
-.tab-content a:focus * {
-  color: $light;
+.tab-pane a:hover *,
+.tab-pane a:focus * {
+  color: $light !important;
   background-color: $primary;
 }
 

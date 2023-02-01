@@ -1,4 +1,4 @@
 /node_modules/
-/app/bootstrap
 .DS_Store
 **/CNAME
+*.code-workspace

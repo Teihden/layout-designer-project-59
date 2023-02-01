@@ -2,9 +2,5 @@ install:
 	npm install
 
 lint:
-	npx stylelint ./app/scss/**/*.scss
-	npx htmlhint ./build/*.html
-	npx pug-lint ./app/pug/**/*.pug
-
-deploy:
-	npx surge --project ./build --domain https://hex-chat.surge.sh
+	npx stylelint ./app/**/*.scss
+	npx pug-lint ./app/pug/**/*.pug --reporter node_modules/puglint-stylish
