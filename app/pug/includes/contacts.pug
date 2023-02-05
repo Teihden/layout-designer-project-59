@@ -48,7 +48,7 @@ h2.fw-bold.text-900.mb-4 Контакты
 each users, letter in contacts
   p.mt-5.mb-3= letter
   each user in users
-    a.d-flex.align-items-center.text-decoration-none.shadow-sm.border-0.mb-3(href= user.link)
+    a.d-flex.align-items-center.text-decoration-none.shadow-sm.mb-3(href= user.link)
       img.ms-3.me-4.rounded-circle(src= user.avatar alt= user.avatar.slice(7, 15) width="50" height="50")
       .py-4
         p.fw-bold.text-900.mb-0= user.name

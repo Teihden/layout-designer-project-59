@@ -683,6 +683,10 @@ button:not(:disabled),
   border-right: 0 !important;
 }
 
+.border-bottom {
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
 .border-start-0 {
   border-left: 0 !important;
 }
@@ -967,9 +971,6 @@ button:not(:disabled),
   }
   .d-md-none {
     display: none !important;
-  }
-  .border-top-md {
-    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
   }
   .justify-content-md-start {
     justify-content: flex-start !important;
