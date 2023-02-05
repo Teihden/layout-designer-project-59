@@ -10,8 +10,8 @@ https://hex-chat.surge.sh
 ## Setup
 
 ```bash
-# Install dependencies
-make install
+# Install dependencies (with flag "--force")
+make install --force
 ```
 
 ## CLI
@@ -37,6 +37,6 @@ copy
 deploy
 
 # Runs pug-lint, Pug, Stylelint, Sass, PurgeCSS, Autoprefixer, copy Bootstrap files (icons, JS),
-# Starts Browsersync server in sequential order and wathes for changes
+# starts Browsersync server in sequential order and wathes for changes
 default
 ```

@@ -9,13 +9,8 @@
 // Required Bootstrap variables
 @import "../../node_modules/bootstrap/scss/variables";
 
-// Custom variables merge
-$theme-colors: map.merge($theme-colors, $custom-colors);
-$container-max-widths: map.merge(
-  $container-max-widths,
-  $custom-container-max-widths
-);
-$grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
+// Custom setups
+@import "custom-setups";
 
 // Required Bootstrap components
 @import "../../node_modules/bootstrap/scss/maps";
@@ -48,5 +43,5 @@ $grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
 // Bootstrap icons
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
-// Custom SASS
+// Custom styles
 @import "custom-main";

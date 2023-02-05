@@ -15,14 +15,14 @@ const browserSyncJob = () => {
     open: false
   });
 
-  watch("app/scss/**/*.scss", series(lintSass, buildSass, purgeCSS, postCSS));
+  watch("app/scss/**/*.scss", series(lintBuildSass, purgeCSS, postCSS));
   watch("app/pug/**/*.pug", series(lintPug, buildPug));
   watch("node_modules/bootstrap/dist/js/bootstrap.min.js", copyBootstrapJS);
   watch("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", copyBootstrapIcons);
 };
 
-const lintSass = () => {
-  console.log("Проверка линтером Sass");
+const lintBuildSass = () => {
+  console.log("Проверка линтером Sass, компиляция SASS");
 
   return src("app/scss/*.scss")
     .pipe(stylelint({
@@ -32,39 +32,33 @@ const lintSass = () => {
       ],
       fix: true
     }))
-    .pipe(dest("app/scss/"));;
-};
-
-const buildSass = () => {
-  console.log("Компиляция SASS");
-
-  return src("app/scss/*.scss")
     .pipe(sass({
-      outputStyle: "compressed"
+      outputStyle: "expanded" // compressed | expanded
     }))
-    .pipe(dest("build/css/"));
+    .pipe(dest("app/css/"));
 };
 
 const purgeCSS = () => {
   console.log("запуск PurgeCSS");
 
-  return src("build/css/*.css")
+  return src("app/css/*.css")
     .pipe(purgecss({
       content: ["build/*.html"],
       variables: true
     }))
-    .pipe(dest("build/css"))
+    .pipe(dest("app/css"));
 };
 
 const postCSS = () => {
   console.log("запуск Autoprefixer");
 
-  return src("build/css/*.css")
+  return src("app/css/*.css")
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest("build/css"));
+    .pipe(dest("build/css"))
+    .pipe(browserSync.stream());
 };
 
-const lintPug = () => {
+function lintPug() {
   console.log("Проверка линтером Pug");
 
   return src("app/pug/pages/*.pug")
@@ -72,14 +66,14 @@ const lintPug = () => {
       reporter: 'puglint-stylish',
       failAfterError: true
     }));
-};
+}
 
 const buildPug = () => {
   console.log("Компиляция Pug");
 
   return src("app/pug/pages/*.pug")
     .pipe(pug({
-      pretty: null,
+      pretty: true, // null | true
       doctype: "html"
     }))
     .pipe(dest("build/"))
@@ -106,7 +100,7 @@ const deploySurge = () => {
 };
 
 exports.server = browserSyncJob;
-exports.build = parallel(series(lintPug, buildPug), series(lintSass, buildSass, purgeCSS, postCSS));
+exports.build = parallel(series(lintPug, buildPug), series(lintBuildSass, purgeCSS, postCSS));
 exports.copy = parallel(copyBootstrapJS, copyBootstrapIcons);
 exports.deploy = deploySurge;
-exports.default = series(parallel(series(lintPug, buildPug), series(lintSass, buildSass, purgeCSS, postCSS)), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);
+exports.default = series(parallel(series(lintPug, buildPug), series(lintBuildSass, purgeCSS, postCSS)), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);

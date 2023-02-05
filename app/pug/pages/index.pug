@@ -1,6 +1,6 @@
 //- index.pug
 -
-  const url = 'index'
+  const url = "index"
 
   const active = {
     contacts: ["show active"],
@@ -11,12 +11,12 @@
 include ../includes/mixins.pug
 
 doctype html
-html.h-100(lang='ru')
+html.h-100(lang="ru")
 
   //- Подключение head
   include ../includes/head.pug
 
-  body.h-100.p-md-4.bg-theme-gray
+  body.h-100.p-md-4
     .container-xxxl.rounded-md-4.bg-white.h-100.overflow-hidden
       .row.h-100
         .col-sm-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.border-theme-gray.h-100
@@ -26,17 +26,17 @@ html.h-100(lang='ru')
 
           .tab-content.hide-scrollbar
 
-            section.tab-pane.fade.pt-5.px-4#contacts(class= active.contacts, role='tabpanel', aria-labelledby='contacts-tab', tabindex='0')
+            section.tab-pane.fade.pt-5.px-4#contacts(class= active.contacts role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")
 
               //- Подключение contacts
               include ../includes/contacts.pug
 
-            section.tab-pane.fade.pt-5.px-4#chats(class= active.chats, role='tabpanel', aria-labelledby='chats-tab', tabindex='0')
+            section.tab-pane.fade.pt-5.px-4#chats(class= active.chats role="tabpanel" aria-labelledby="chats-tab" tabindex="0")
 
               //- Подключение chats
               include ../includes/chats.pug
 
-            section.tab-pane.fade.pt-5.px-4#profile(role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+            section.tab-pane.fade.pt-5.px-4#profile(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")
 
               //- Подключение profile
               include ../includes/profile.pug
@@ -46,4 +46,4 @@ html.h-100(lang='ru')
           //- Подключение avatar
           include ../includes/avatar.pug
 
-    script(src='js/bootstrap.min.js')
+    script(src="js/bootstrap.min.js")

@@ -1,31 +1,28 @@
 //- includes/profile.pug
-header
-  h2.fw-bold.mb-4 Профиль
-  +search-panel('Поиск по сообщениям')
-.profile.hide-scrollbar
-  .card.align-items-center.text-center.py-4.mb-5.border-0
-    .card-body
-      img.rounded-circle.mb-2(src='images/avatar_1.jpg', alt='avatar_1', width='90')
-      .card-title.fw-bold.mb-4 Кодовёнок Хекслетович
-      p.card-text.text-muted Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
-  ul.list-group.list-group-flush.mx-3
-    li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
-      .me-auto
-        p.m-0.small.text-muted Страна
-        p.m-0.small Москва, Россия
-      .bi.bi-globe.text-black-50
-    li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
-      .me-auto
-        p.m-0.small.text-muted Телефон
-        p.m-0.small +7 (499) 123-45-67
-      .bi.bi-telephone.text-black-50
-    li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
-      .me-auto
-        p.m-0.small.text-muted Email
-        p.m-0.small nikita.m@hexlet.io
-      .bi.bi-envelope.text-black-50
-    li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
-      .me-auto
-        p.m-0.small.text-muted Twitter
-        p.m-0.small @n_mikhaylov
-      .bi.bi-people.text-black-50
+h2.fw-bold.text-900.mb-4 Профиль
++search-panel("Поиск по сообщениям")
+.card.align-items-center.text-center.py-4.mb-5.border-0
+  img.rounded-circle.mb-2(src="images/avatar_1.jpg" alt="avatar_1" width="90" height="90")
+  p.fw-bold.text-900.mb-4 Кодовёнок Хекслетович
+  p.text-black-50 Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+ul.list-group.list-group-flush.mx-3
+  li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
+    .me-auto
+      p.mb-0.small Страна
+      p.text-900.mb-0.small Москва, Россия
+    span.bi.bi-globe.text-black-50
+  li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
+    .me-auto
+      p.mb-0.small Телефон
+      p.text-900.mb-0.small +7 (499) 123-45-67
+    span.bi.bi-telephone.text-black-50
+  li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
+    .me-auto
+      p.mb-0.small Email
+      p.text-900.mb-0.small nikita.m@hexlet.io
+    span.bi.bi-envelope.text-black-50
+  li.list-group-item.d-flex.justify-content-between.align-items-center.border-theme-gray
+    .me-auto
+      p.mb-0.small Twitter
+      p.text-900.mb-0.small @n_mikhaylov
+    span.bi.bi-people.text-black-50

@@ -1,4 +1,6 @@
 {
-    "extends": "clock",
-    "disallowIdLiterals": null
+  "extends": "clock",
+  "disallowIdLiterals": null,
+  "validateAttributeQuoteMarks": "\"",
+  "validateAttributeSeparator": " "
 }

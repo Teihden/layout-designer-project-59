@@ -1,0 +1,26 @@
+// Theme-colors
+$theme-colors: map.merge($theme-colors, $custom-colors);
+$container-max-widths: map.merge(
+  $container-max-widths,
+  $custom-container-max-widths
+);
+
+// Body
+$body-bg: map.get($custom-colors, "theme-gray");
+$body-color: $gray-600;
+
+// Form
+$input-bg: $white;
+
+// Lists
+$list-group-color: $gray-600;
+
+// Navs
+$nav-tabs-border-width: 0;
+$nav-tabs-link-active-bg: trasparent;
+
+// Mixin box-shadow
+$enable-shadows: true;
+
+// Breakpoints
+$grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);

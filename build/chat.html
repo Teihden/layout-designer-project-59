@@ -1,1 +1,231 @@
-<!DOCTYPE html><html class="h-100" lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Мессенджер «Hexlet Chat» (nyrow)</title><link rel="icon" href="images/logo.png" type="image/png"><link rel="stylesheet" href="css/app.css"></head><body class="h-100 p-md-4 bg-theme-gray"><div class="container-xxxl rounded-md-4 bg-white h-100 overflow-hidden"><div class="row h-100"><div class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4 p-0 d-flex flex-column justify-content-between justify-content-md-start border-end border-theme-gray h-100"><header class="page-header order-last order-md-first d-flex align-items-center py-3 px-3 bg-primary"><h1 class="visually-hidden">Мессенджер «Hexlet Chat»</h1><a class="logo d-grid" href="index.html"><img class="m-auto" src="images/icons/logo.svg" alt="logo" width="14" height="25"></a><nav class="ms-auto"><ul class="nav nav-tabs justify-content-end flex-nowrap border-0" role="tablist"><li class="nav-item"><a class="nav-link d-block d-md-none" id="current-chat-tab" href="#current-chat" data-bs-toggle="tab" data-bs-target="#current-chat" role="tab" aria-controls="current-chat" aria-selected="false"><img class="me-2" src="images/icons/chat-left-text.svg" alt="logo" width="25"></a></li><li class="nav-item"><a class="nav-link" id="contacts-tab" href="#contacts" data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="false"><img class="me-2" src="images/icons/people.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Контакты</span></a></li><li class="nav-item"><a class="nav-link active" id="chats-tab" href="#chats" data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="true"><img class="me-2" src="images/icons/chat.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Сообщения</span></a></li><li class="nav-item"><a class="nav-link" id="profile-tab" href="#profile" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false"><img class="me-2" src="images/icons/person.svg" alt="logo" width="25"><span class="d-none d-md-inline small text-light">Профиль</span></a></li></ul></nav></header><div class="tab-content hide-scrollbar"><section class="tab-pane fade pt-5 px-4" id="contacts" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0"><header><h2 class="fw-bold mb-4">Контакты</h2><form class="mb-5" role="search" action="#" method="post"><input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по контактам" aria-label="Search"></form></header><div class="contact-list"><div class="text-muted mt-5 mb-3">A</div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="#"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_3.jpg" alt="avatar_3" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Алексей Примадонин</div><div class="text-secondary small">Онлайн</div></div></div></div></a></div><div class="text-muted mt-5 mb-3">В</div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="chat.html"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Вениамин Редакторович</div><div class="text-secondary small">Онлайн</div></div></div></div></a></div><div class="text-muted mt-5 mb-3">Д</div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="#"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_2.jpg" alt="avatar_2" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Джедай Падаванов</div><div class="text-secondary small">Был онлайн вчера</div></div></div></div></a></div><div class="text-muted mt-5 mb-3">К</div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="#"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_1.jpg" alt="avatar_1" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Кодовёнок Хекслетович</div><div class="text-secondary small">Был онлайн 3 часа назад</div></div></div></div></a></div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="#"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_5.jpg" alt="avatar_5" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Королева Верстальщина</div><div class="text-secondary small">Была онлайн вчера</div></div></div></div></a></div><div class="text-muted mt-5 mb-3">П</div><div class="card shadow-sm border-0"><a class="text-decoration-none" href="#"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_6.jpg" alt="avatar_6" width="50"></div><div class="col pe-4"><div class="card-body py-4 ps-0"><div class="card-title fw-bold text-900 m-0">Питонист Джангович</div><div class="text-secondary small">Был онлайн вчера</div></div></div></div></a></div></div></section><section class="tab-pane fade pt-5 px-4 show active" id="chats" role="tabpanel" aria-labelledby="chats-tab" tabindex="0"><header><h2 class="fw-bold mb-4">Чаты</h2><form class="mb-5" role="search" action="#" method="post"><input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search"></form></header><div class="chat-list hide-scrollbar"><div class="card shadow-sm border-0 mb-3"><a class="text-decoration-none" href="chat.html"><div class="row m-0 flex-nowrap"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col pe-4 overflow-hidden"><div class="card-body py-4 ps-0"><div class="d-flex justify-content-between"><div class="card-title fw-bold text-900 m-0">Вениамин Редакторович</div><div class="text-secondary small">11:45</div></div><p class="text-secondary small text-truncate m-0">o_O</p></div></div></div></a></div><div class="card shadow-sm border-0 mb-3"><a class="text-decoration-none" href="#"><div class="row m-0 flex-nowrap"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_2.jpg" alt="avatar_2" width="50"></div><div class="col pe-4 overflow-hidden"><div class="card-body py-4 ps-0"><div class="d-flex justify-content-between"><div class="card-title fw-bold text-900 m-0">Джедай Падаванов</div><div class="text-secondary small">10:12</div></div><p class="text-secondary small text-truncate m-0">Привет, скоро третий проект? Уже скоро надо будет выложить</p></div></div></div></a></div><div class="card shadow-sm border-0 mb-3"><a class="text-decoration-none" href="#"><div class="row m-0 flex-nowrap"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_3.jpg" alt="avatar_3" width="50"></div><div class="col pe-4 overflow-hidden"><div class="card-body py-4 ps-0"><div class="d-flex justify-content-between"><div class="card-title fw-bold text-900 m-0">Алексей Примадонин</div><div class="text-secondary small">08:53</div></div><p class="text-secondary small text-truncate m-0">Тесты упали &gt;_&lt;</p></div></div></div></a></div></div></section><section class="tab-pane fade pt-5 px-4" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><header><h2 class="fw-bold mb-4">Профиль</h2><form class="mb-5" role="search" action="#" method="post"><input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search"></form></header><div class="profile hide-scrollbar"><div class="card align-items-center text-center py-4 mb-5 border-0"><div class="card-body"><img class="rounded-circle mb-2" src="images/avatar_1.jpg" alt="avatar_1" width="90"><div class="card-title fw-bold mb-4">Кодовёнок Хекслетович</div><p class="card-text text-muted">Милый и скромный помощник начинающих разработчиков. Люблю JavaScript</p></div></div><ul class="list-group list-group-flush mx-3"><li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray"><div class="me-auto"><p class="m-0 small text-muted">Страна</p><p class="m-0 small">Москва, Россия</p></div><div class="bi bi-globe text-black-50"></div></li><li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray"><div class="me-auto"><p class="m-0 small text-muted">Телефон</p><p class="m-0 small">+7 (499) 123-45-67</p></div><div class="bi bi-telephone text-black-50"></div></li><li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray"><div class="me-auto"><p class="m-0 small text-muted">Email</p><p class="m-0 small">nikita.m@hexlet.io</p></div><div class="bi bi-envelope text-black-50"></div></li><li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray"><div class="me-auto"><p class="m-0 small text-muted">Twitter</p><p class="m-0 small">@n_mikhaylov</p></div><div class="bi bi-people text-black-50"></div></li></ul></div></section><section class="tab-pane fade d-md-none h-100" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab" tabindex="0"><div class="d-flex flex-column h-100"><header class="me-4 pos"><h2 class="visually-hidden">Чат</h2><div class="card chat shadow-none border-theme-gray border-top-0 border-start-0 border-end-0"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col py-4"><div class="card-body p-0"><div class="card-title fw-bold m-0">Вениамин Редакторович</div><div class="text-secondary small m-0">Онлайн</div></div></div></div></div></header><div class="message-list ps-5 pe-5 pt-5 d-flex flex-column gap-3 hide-scrollbar"><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">8 минут назад</div></div></div></div><div class="card border-0 align-self-end"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_1.jpg" alt="avatar_1" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-primary"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><p class="card-text text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-light">5 минут назад</div></div></div></div><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">Лады</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">5 минут назад</div></div></div></div><div class="card border-0 align-self-end"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_1.jpg" alt="avatar_1" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-primary"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><p class="card-text text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-light">3 минут назад</div></div></div></div><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">о_О</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">Только что</div></div></div></div></div><form class="border-theme-gray border-top-md mt-auto mx-md-5" role="search" action="#" method="post"><div class="input-group align-items-center ps-2 pe-md-2 py-md-1"><input class="form-control border-0 shadow-none ps-4 ps-md-3 pe-0 py-0" type="search" placeholder="Напишите сообщение..." aria-label="Search"><button class="btn btn-primary btn-message rounded-circle border-0 p-0 m-3" type="submit" id="message-submit-1"><i class="bi bi-cursor fs-4 text-white m-0"></i></button></div></form></div></section></div></div><main class="col d-none d-md-flex flex-column h-100 p-0"><header class="me-4 pos"><h2 class="visually-hidden">Чат</h2><div class="card chat shadow-none border-theme-gray border-top-0 border-start-0 border-end-0"><div class="row m-0"><div class="col-auto ps-3 d-flex align-items-center"><img class="rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col py-4"><div class="card-body p-0"><div class="card-title fw-bold m-0">Вениамин Редакторович</div><div class="text-secondary small m-0">Онлайн</div></div></div></div></div></header><div class="message-list ps-5 pe-5 pt-5 d-flex flex-column gap-3 hide-scrollbar"><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">8 минут назад</div></div></div></div><div class="card border-0 align-self-end"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_1.jpg" alt="avatar_1" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-primary"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><p class="card-text text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-light">5 минут назад</div></div></div></div><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">Лады</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">5 минут назад</div></div></div></div><div class="card border-0 align-self-end"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_1.jpg" alt="avatar_1" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-primary"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><p class="card-text text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-light">3 минут назад</div></div></div></div><div class="card border-0 align-self-start"><div class="row m-0 gap-3"><div class="col-auto p-0 d-none d-md-flex"><img class="rounded-circle mt-auto" src="images/avatar_4.jpg" alt="avatar_4" width="50"></div><div class="col message-balloon p-4 shadow-sm rounded-4 bg-light"><div class="card-body p-0 d-flex flex-column gap-1 mb-2"><div class="card-title fw-bold text-dark m-0">Вениамин Редакторович</div><p class="card-text text-secondary">о_О</p></div><div class="opacity-60 small border-theme-gray border-top pt-1 m-0 text-secondary">Только что</div></div></div></div></div><form class="border-theme-gray border-top-md mt-auto mx-md-5" role="search" action="#" method="post"><div class="input-group align-items-center ps-2 pe-md-2 py-md-1"><input class="form-control border-0 shadow-none ps-4 ps-md-3 pe-0 py-0" type="search" placeholder="Напишите сообщение..." aria-label="Search"><button class="btn btn-primary btn-message rounded-circle border-0 p-0 m-3" type="submit" id="message-submit-2"><i class="bi bi-cursor fs-4 text-white m-0"></i></button></div></form></main></div></div><script src="js/bootstrap.min.js"></script></body></html>
+<!DOCTYPE html>
+<html class="h-100" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер «Hexlet Chat» (nyrow)</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#efefef">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="h-100 p-md-4">
+    <div class="container-xxxl rounded-md-4 bg-white h-100 overflow-hidden">
+      <div class="row h-100">
+        <div class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4 p-0 d-flex flex-column justify-content-between justify-content-md-start border-end border-theme-gray h-100">
+          <header class="page-header order-last order-md-first d-flex align-items-center py-3 px-3 bg-primary">
+            <h1 class="visually-hidden">Мессенджер «Hexlet Chat»</h1><a class="logo d-grid" href="index.html"><img class="m-auto" src="images/icons/logo.svg" alt="logo" width="14" height="25"></a>
+            <nav class="ms-auto">
+              <ul class="nav nav-tabs justify-content-end flex-nowrap border-0" role="tablist">
+                <li class="nav-item"><a class="nav-link d-block d-md-none" id="current-chat-tab" href="#current-chat" data-bs-toggle="tab" data-bs-target="#current-chat" role="tab" aria-controls="current-chat" aria-selected="false"><img class="me-2" src="images/icons/chat-left-text.svg" alt="logo" width="25" height="25"></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" id="contacts-tab" href="#contacts" data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="false"><img class="me-2" src="images/icons/people.svg" alt="logo" width="25" height="25"><span class="d-none d-md-inline small text-light">Контакты</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link active" id="chats-tab" href="#chats" data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="true"><img class="me-2" src="images/icons/chat.svg" alt="logo" width="25" height="25"><span class="d-none d-md-inline small text-light">Сообщения</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" id="profile-tab" href="#profile" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false"><img class="me-2" src="images/icons/person.svg" alt="logo" width="25" height="25"><span class="d-none d-md-inline small text-light">Профиль</span></a></li>
+              </ul>
+            </nav>
+          </header>
+          <div class="tab-content h-100 hide-scrollbar">
+            <section class="tab-pane fade pt-5 px-4" id="contacts" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0">
+              <h2 class="fw-bold text-900 mb-4">Контакты</h2>
+              <form class="mb-5" role="search" action="#" method="post">
+                <input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по контактам" aria-label="Search">
+              </form>
+              <p class="mt-5 mb-3">A</p><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_3.jpg" alt="avatar_3" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Алексей Примадонин</p>
+                  <p class="text-muted small mb-0">Онлайн</p>
+                </div></a>
+              <p class="mt-5 mb-3">В</p><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="chat.html"><img class="ms-3 me-4 rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Вениамин Редакторович</p>
+                  <p class="text-muted small mb-0">Онлайн</p>
+                </div></a>
+              <p class="mt-5 mb-3">Д</p><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_2.jpg" alt="avatar_2" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Джедай Падаванов</p>
+                  <p class="text-muted small mb-0">Был онлайн вчера</p>
+                </div></a>
+              <p class="mt-5 mb-3">К</p><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_1.jpg" alt="avatar_1" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Кодовёнок Хекслетович</p>
+                  <p class="text-muted small mb-0">Был онлайн 3 часа назад</p>
+                </div></a><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_5.jpg" alt="avatar_5" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Королева Верстальщина</p>
+                  <p class="text-muted small mb-0">Была онлайн вчера</p>
+                </div></a>
+              <p class="mt-5 mb-3">П</p><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_6.jpg" alt="avatar_6" width="50" height="50">
+                <div class="py-4">
+                  <p class="fw-bold text-900 mb-0">Питонист Джангович</p>
+                  <p class="text-muted small mb-0">Был онлайн вчера</p>
+                </div></a>
+            </section>
+            <section class="tab-pane fade pt-5 px-4 show active" id="chats" role="tabpanel" aria-labelledby="chats-tab" tabindex="0">
+              <h2 class="fw-bold text-900 mb-4">Чаты</h2>
+              <form class="mb-5" role="search" action="#" method="post">
+                <input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
+              </form><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 pe-4 mb-3" href="chat.html"><img class="ms-3 me-4 rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                <div class="py-4 pe-3 w-100 overflow-hidden">
+                  <div class="d-flex justify-content-between"><span class="fw-bold text-900">Вениамин Редакторович</span><span class="text-secondary small">11:45</span></div>
+                  <p class="text-secondary small text-truncate mb-0">o_O</p>
+                </div></a><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 pe-4 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_2.jpg" alt="avatar_2" width="50" height="50">
+                <div class="py-4 pe-3 w-100 overflow-hidden">
+                  <div class="d-flex justify-content-between"><span class="fw-bold text-900">Джедай Падаванов</span><span class="text-secondary small">10:12</span></div>
+                  <p class="text-secondary small text-truncate mb-0">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
+                </div></a><a class="d-flex align-items-center text-decoration-none shadow-sm border-0 pe-4 mb-3" href="#"><img class="ms-3 me-4 rounded-circle" src="images/avatar_3.jpg" alt="avatar_3" width="50" height="50">
+                <div class="py-4 pe-3 w-100 overflow-hidden">
+                  <div class="d-flex justify-content-between"><span class="fw-bold text-900">Алексей Примадонин</span><span class="text-secondary small">08:53</span></div>
+                  <p class="text-secondary small text-truncate mb-0">Тесты упали &gt;_&lt;</p>
+                </div></a>
+            </section>
+            <section class="tab-pane fade pt-5 px-4" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <h2 class="fw-bold text-900 mb-4">Профиль</h2>
+              <form class="mb-5" role="search" action="#" method="post">
+                <input class="form-control p-4 border-theme-gray border-top-0 border-start-0 border-end-0 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
+              </form>
+              <div class="card align-items-center text-center py-4 mb-5 border-0"><img class="rounded-circle mb-2" src="images/avatar_1.jpg" alt="avatar_1" width="90" height="90">
+                <p class="fw-bold text-900 mb-4">Кодовёнок Хекслетович</p>
+                <p class="text-black-50">Милый и скромный помощник начинающих разработчиков. Люблю JavaScript</p>
+              </div>
+              <ul class="list-group list-group-flush mx-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray">
+                  <div class="me-auto">
+                    <p class="mb-0 small">Страна</p>
+                    <p class="text-900 mb-0 small">Москва, Россия</p>
+                  </div><span class="bi bi-globe text-black-50"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray">
+                  <div class="me-auto">
+                    <p class="mb-0 small">Телефон</p>
+                    <p class="text-900 mb-0 small">+7 (499) 123-45-67</p>
+                  </div><span class="bi bi-telephone text-black-50"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray">
+                  <div class="me-auto">
+                    <p class="mb-0 small">Email</p>
+                    <p class="text-900 mb-0 small">nikita.m@hexlet.io</p>
+                  </div><span class="bi bi-envelope text-black-50"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-theme-gray">
+                  <div class="me-auto">
+                    <p class="mb-0 small">Twitter</p>
+                    <p class="text-900 mb-0 small">@n_mikhaylov</p>
+                  </div><span class="bi bi-people text-black-50"></span>
+                </li>
+              </ul>
+            </section>
+            <section class="tab-pane fade d-md-none h-100" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab" tabindex="0">
+              <div class="d-flex flex-column h-100">
+                <header class="d-flex align-items-center shadow-none border-theme-gray border-top-0 border-start-0 border-end-0 me-md-4">
+                  <h2 class="visually-hidden">Чат</h2><img class="ms-3 me-4 rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                  <div class="py-4">
+                    <p class="fw-bold text-900 mb-0">Вениамин Редакторович</p>
+                    <p class="small mb-0">Онлайн</p>
+                  </div>
+                </header>
+                <div class="d-flex flex-column gap-3 ps-5 pe-5 pt-5 mb-auto hide-scrollbar">
+                  <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                    <div class="p-4 shadow-sm rounded-4 bg-light">
+                      <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                      <p class="mb-2 text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
+                      <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">8 минут назад</p>
+                    </div>
+                  </div>
+                  <div class="message-balloon d-flex border-0 align-self-end"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_1.jpg" alt="avatar_1" width="50" height="50">
+                    <div class="p-4 shadow-sm rounded-4 bg-primary">
+                      <p class="mb-2 text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
+                      <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-light">5 минут назад</p>
+                    </div>
+                  </div>
+                  <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                    <div class="p-4 shadow-sm rounded-4 bg-light">
+                      <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                      <p class="mb-2 text-secondary">Лады</p>
+                      <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">5 минут назад</p>
+                    </div>
+                  </div>
+                  <div class="message-balloon d-flex border-0 align-self-end"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_1.jpg" alt="avatar_1" width="50" height="50">
+                    <div class="p-4 shadow-sm rounded-4 bg-primary">
+                      <p class="mb-2 text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
+                      <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-light">3 минут назад</p>
+                    </div>
+                  </div>
+                  <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+                    <div class="p-4 shadow-sm rounded-4 bg-light">
+                      <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                      <p class="mb-2 text-secondary">о_О</p>
+                      <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">Только что</p>
+                    </div>
+                  </div>
+                </div>
+                <form class="border-theme-gray border-top-md mx-md-5" role="search" action="#" method="post">
+                  <div class="input-group align-items-center ps-2 pe-md-2 py-md-1">
+                    <input class="form-control border-0 shadow-none ps-4 ps-md-3 pe-0 py-0" type="search" placeholder="Напишите сообщение..." aria-label="Search">
+                    <button class="btn btn-primary btn-message rounded-circle border-0 p-0 m-3" type="submit" id="message-submit-1"><span class="bi bi-cursor fs-4 text-white"></span></button>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+        <main class="col d-none d-md-flex flex-column h-100 p-0">
+          <header class="d-flex align-items-center shadow-none border-theme-gray border-top-0 border-start-0 border-end-0 me-md-4">
+            <h2 class="visually-hidden">Чат</h2><img class="ms-3 me-4 rounded-circle" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+            <div class="py-4">
+              <p class="fw-bold text-900 mb-0">Вениамин Редакторович</p>
+              <p class="small mb-0">Онлайн</p>
+            </div>
+          </header>
+          <div class="d-flex flex-column gap-3 ps-5 pe-5 pt-5 mb-auto hide-scrollbar">
+            <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+              <div class="p-4 shadow-sm rounded-4 bg-light">
+                <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                <p class="mb-2 text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
+                <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">8 минут назад</p>
+              </div>
+            </div>
+            <div class="message-balloon d-flex border-0 align-self-end"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_1.jpg" alt="avatar_1" width="50" height="50">
+              <div class="p-4 shadow-sm rounded-4 bg-primary">
+                <p class="mb-2 text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
+                <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-light">5 минут назад</p>
+              </div>
+            </div>
+            <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+              <div class="p-4 shadow-sm rounded-4 bg-light">
+                <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                <p class="mb-2 text-secondary">Лады</p>
+                <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">5 минут назад</p>
+              </div>
+            </div>
+            <div class="message-balloon d-flex border-0 align-self-end"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_1.jpg" alt="avatar_1" width="50" height="50">
+              <div class="p-4 shadow-sm rounded-4 bg-primary">
+                <p class="mb-2 text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
+                <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-light">3 минут назад</p>
+              </div>
+            </div>
+            <div class="message-balloon d-flex border-0 align-self-start"><img class="d-none d-md-block rounded-circle mt-auto me-3" src="images/avatar_4.jpg" alt="avatar_4" width="50" height="50">
+              <div class="p-4 shadow-sm rounded-4 bg-light">
+                <p class="fw-bold text-dark mb-1">Вениамин Редакторович</p>
+                <p class="mb-2 text-secondary">о_О</p>
+                <p class="opacity-60 small border-theme-gray border-top pt-1 mb-0 text-secondary">Только что</p>
+              </div>
+            </div>
+          </div>
+          <form class="border-theme-gray border-top-md mx-md-5" role="search" action="#" method="post">
+            <div class="input-group align-items-center ps-2 pe-md-2 py-md-1">
+              <input class="form-control border-0 shadow-none ps-4 ps-md-3 pe-0 py-0" type="search" placeholder="Напишите сообщение..." aria-label="Search">
+              <button class="btn btn-primary btn-message rounded-circle border-0 p-0 m-3" type="submit" id="message-submit-2"><span class="bi bi-cursor fs-4 text-white"></span></button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -7,19 +7,19 @@ $warning: #ffc107;
 $danger: #dc3545;
 $light: #fbfbfb;
 $dark: #343a40;
-$link-hover-color: $light;
 $custom-colors: (
   "theme-gray": #efefef,
 );
+
+// Containers
 $custom-container-max-widths: (
   "xxxl": 1540px,
 );
+
+// Breakpoints
 $custom-grid-breakpoints: (
   "xxxl": 1600px,
 );
 
-// Mixin box-shadow
-$enable-shadows: true;
-
-// Bootstrap icons dir
+// Bootstrap icons directory
 $bootstrap-icons-font-dir: "../fonts";

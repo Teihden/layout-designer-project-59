@@ -1,33 +1,33 @@
 //- includes/page-header.pug
 header.page-header.order-last.order-md-first.d-flex.align-items-center.py-3.px-3.bg-primary
   h1.visually-hidden Мессенджер «Hexlet Chat»
-  a.logo.d-grid(href='index.html')
-    img.m-auto(src='images/icons/logo.svg', alt='logo', width='14', height='25')
+  a.logo.d-grid(href="index.html")
+    img.m-auto(src="images/icons/logo.svg" alt="logo" width="14" height="25")
   nav.ms-auto
-    ul.nav.nav-tabs.justify-content-end.flex-nowrap.border-0(role='tablist')
+    ul.nav.nav-tabs.justify-content-end.flex-nowrap.border-0(role="tablist")
       li.nav-item
-        if url === 'chat'
-          a.nav-link.d-block.d-md-none#current-chat-tab(href='#current-chat', data-bs-toggle='tab', data-bs-target='#current-chat', role='tab', aria-controls='current-chat', aria-selected='false')
-            img.me-2(src='images/icons/chat-left-text.svg', alt='logo', width='25')
+        if url === "chat"
+          a.nav-link.d-block.d-md-none#current-chat-tab(href="#current-chat" data-bs-toggle="tab" data-bs-target="#current-chat" role="tab" aria-controls="current-chat" aria-selected="false")
+            img.me-2(src="images/icons/chat-left-text.svg" alt="logo" width="25" height="25")
       li.nav-item
-        if url === 'index'
-          a.nav-link.active#contacts-tab(href='#contacts', data-bs-toggle='tab', data-bs-target='#contacts', role='tab', aria-controls='contacts', aria-selected='true')
-            img.me-2(src='images/icons/people.svg', alt='logo', width='25')
+        if url === "index"
+          a.nav-link.active#contacts-tab(href="#contacts" data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="true")
+            img.me-2(src="images/icons/people.svg" alt="logo" width="25" height="25")
             span.d-none.d-md-inline.small.text-light Контакты
-        else if url === 'chat'
-          a.nav-link#contacts-tab(href='#contacts', data-bs-toggle='tab', data-bs-target='#contacts', role='tab', aria-controls='contacts', aria-selected='false')
-            img.me-2(src='images/icons/people.svg', alt='logo', width='25')
+        else if url === "chat"
+          a.nav-link#contacts-tab(href="#contacts" data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="false")
+            img.me-2(src="images/icons/people.svg" alt="logo" width="25" height="25")
             span.d-none.d-md-inline.small.text-light Контакты
       li.nav-item
-        if url === 'index'
-          a.nav-link#chats-tab(href='#chats', data-bs-toggle='tab', data-bs-target='#chats', role='tab', aria-controls='chats', aria-selected='false')
-            img.me-2(src='images/icons/chat.svg', alt='logo', width='25')
+        if url === "index"
+          a.nav-link#chats-tab(href="#chats" data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="false")
+            img.me-2(src="images/icons/chat.svg" alt="logo" width="25" height="25")
             span.d-none.d-md-inline.small.text-light Сообщения
-        else if url === 'chat'
-          a.nav-link.active#chats-tab(href='#chats', data-bs-toggle='tab', data-bs-target='#chats', role='tab', aria-controls='chats', aria-selected='true')
-            img.me-2(src='images/icons/chat.svg', alt='logo', width='25')
+        else if url === "chat"
+          a.nav-link.active#chats-tab(href="#chats" data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="true")
+            img.me-2(src="images/icons/chat.svg" alt="logo" width="25" height="25")
             span.d-none.d-md-inline.small.text-light Сообщения
       li.nav-item
-        a.nav-link#profile-tab(href='#profile', data-bs-toggle='tab', data-bs-target='#profile', role='tab', aria-controls='profile', aria-selected='false')
-          img.me-2(src='images/icons/person.svg', alt='logo', width='25')
+        a.nav-link#profile-tab(href="#profile" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false")
+          img.me-2(src="images/icons/person.svg" alt="logo" width="25" height="25")
           span.d-none.d-md-inline.small.text-light Профиль

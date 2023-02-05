@@ -4,11 +4,6 @@
     height: 40px;
   }
 
-  .nav-tabs {
-    --bs-nav-tabs-link-active-bg: none;
-    --bs-nav-tabs-border-width: 0;
-  }
-
   img {
     filter: invert(1);
   }
@@ -18,6 +13,8 @@
   min-width: 350px;
 }
 
+.tab-pane a:hover,
+.tab-pane a:focus,
 .tab-pane a:hover *,
 .tab-pane a:focus * {
   color: $light !important;
@@ -39,5 +36,5 @@
 }
 
 .message-balloon {
-  max-width: 557px;
+  max-width: 75%;
 }

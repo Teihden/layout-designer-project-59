@@ -1,24 +1,17 @@
 //- includes/current-chat.pug
-header.me-4.pos
+header.d-flex.align-items-center.shadow-none.border-theme-gray.border-top-0.border-start-0.border-end-0.me-md-4
   h2.visually-hidden Чат
-  .card.chat.shadow-none.border-theme-gray.border-top-0.border-start-0.border-end-0
-    .row.m-0
-      .col-auto.ps-3.d-flex.align-items-center
-        img.rounded-circle(src= messages.partner1.avatar, alt= messages.partner1.avatar.slice(7, 15), width='50')
-      .col.py-4
-        .card-body.p-0
-          .card-title.fw-bold.m-0= messages.partner1.name
-          .text-secondary.small.m-0 Онлайн
+  img.ms-3.me-4.rounded-circle(src= messages.partner1.avatar alt= messages.partner1.avatar.slice(7, 15) width="50" height="50")
+  .py-4
+    p.fw-bold.text-900.mb-0= messages.partner1.name
+    p.small.mb-0 Онлайн
 
-.message-list.ps-5.pe-5.pt-5.d-flex.flex-column.gap-3.hide-scrollbar
+.d-flex.flex-column.gap-3.ps-5.pe-5.pt-5.mb-auto.hide-scrollbar
   each message in messages
-    .card.border-0(class= message.layout)
-      .row.m-0.gap-3
-        .col-auto.p-0.d-none.d-md-flex
-          img.rounded-circle.mt-auto(src= message.avatar, alt= message.avatar.slice(7, 15), width='50')
-        .col.message-balloon.p-4.shadow-sm.rounded-4(class= message.background)
-          .card-body.p-0.d-flex.flex-column.gap-1.mb-2
-            if message.name !== null
-              .card-title.fw-bold.text-dark.m-0= message.name
-            p.card-text(class= message.color)= message.text
-          .opacity-60.small.border-theme-gray.border-top.pt-1.m-0(class= message.color)= message.time
+    .message-balloon.d-flex.border-0(class= message.layout)
+      img.d-none.d-md-block.rounded-circle.mt-auto.me-3(src= message.avatar alt= message.avatar.slice(7, 15) width="50" height="50")
+      .p-4.shadow-sm.rounded-4(class= message.background)
+        if message.name !== null
+          p.fw-bold.text-dark.mb-1= message.name
+        p.mb-2(class= message.color)= message.text
+        p.opacity-60.small.border-theme-gray.border-top.pt-1.mb-0(class= message.color)= message.time
