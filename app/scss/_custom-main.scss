@@ -35,6 +35,8 @@
   }
 }
 
-.message-balloon {
-  max-width: 75%;
+@include media-breakpoint-up(md) {
+  .message-balloon {
+    max-width: 75%;
+  }
 }
