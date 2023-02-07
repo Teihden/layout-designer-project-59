@@ -9,7 +9,7 @@ https://hex-chat.surge.sh
 
 ## Setup
 
-```bash
+```shell
 # Install dependencies (with flag "--force")
 make install --force
 ```

@@ -1,15 +1,13 @@
 $utilities: map.merge(
   $utilities,
   (
-    "rounded":
-      map.merge(
-        map.get($utilities, "rounded"),
-        ( responsive: true, )
-      ),
+    "rounded": map.merge(
+      map.get($utilities, "rounded"),
+      ( responsive: true )
+    ),
   )
 );
-
-$utilities: map-merge(
+$utilities: map.merge(
   $utilities,
   (
     "radius-left-top": (
