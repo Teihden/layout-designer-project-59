@@ -1,10 +1,6 @@
 $utilities: map.merge(
   $utilities,
   (
-    "rounded": map.merge(
-      map.get($utilities, "rounded"),
-      ( responsive: true, )
-    ),
     "border": map.merge(
       map.get($utilities, "border"),
       ( responsive: true, )
@@ -24,24 +20,6 @@ $utilities: map.merge(
     "border-start": map.merge(
       map.get($utilities, "border-start"),
       ( responsive: true, )
-    ),
-    "opacity": map.merge(
-      map.get($utilities, "opacity"),
-      (
-        values: map.merge(
-          map.get(map.get($utilities, "opacity"), "values"),
-          ( 60: 0.6, ),
-        ),
-      ),
-    ),
-    "color": map.merge(
-      map.get($utilities, "color"),
-      (
-        values: map.merge(
-          map.get(map.get($utilities, "color"), "values"),
-          $grays,
-        ),
-      ),
     ),
   )
 );

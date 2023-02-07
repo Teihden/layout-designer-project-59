@@ -1,29 +1,4 @@
 //- includes/chats.pug
--
-  const chats = [
-    {
-      name: "Вениамин Редакторович",
-      time: "11:45",
-      message: "o_O",
-      avatar: "images/avatar_4.jpg",
-      link: "chat.html"
-    },
-    {
-      name: "Джедай Падаванов",
-      time: "10:12",
-      message: "Привет, скоро третий проект? Уже скоро надо будет выложить",
-      avatar: "images/avatar_2.jpg",
-      link: "#"
-    },
-    {
-      name: "Алексей Примадонин",
-      time: "08:53",
-      message: "Тесты упали >_<",
-      avatar: "images/avatar_3.jpg",
-      link: "#"
-    },
-  ]
-
 h2.fw-bold.text-900.mb-4 Чаты
 +search-panel("Поиск по сообщениям")
 each chat in chats

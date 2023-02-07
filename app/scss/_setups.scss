@@ -6,7 +6,7 @@ $container-max-widths: map.merge(
 );
 
 // Body
-$body-bg: map.get($custom-colors, "theme-gray");
+$body-bg: $theme-gray;
 $body-color: $gray-600;
 
 // Form
@@ -14,13 +14,20 @@ $input-bg: $white;
 
 // Lists
 $list-group-color: $gray-600;
+$list-group-border-color: $theme-gray;
 
 // Navs
 $nav-tabs-border-width: 0;
 $nav-tabs-link-active-bg: trasparent;
+
+// Borders
+$border-color: $theme-gray;
 
 // Mixin box-shadow
 $enable-shadows: true;
 
 // Breakpoints
 $grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
+
+// Bootstrap icons directory
+$bootstrap-icons-font-dir: "../fonts";

@@ -1,5 +1,5 @@
 //- includes/current-chat.pug
-header.d-flex.align-items-center.border-theme-gray.border-bottom.me-md-4
+header.d-flex.align-items-center.border-bottom.me-md-4
   h2.visually-hidden Чат
   img.ms-3.me-4.rounded-circle(src= messages.partner1.avatar alt= messages.partner1.avatar.slice(7, 15) width="50" height="50")
   .py-4
@@ -14,4 +14,4 @@ header.d-flex.align-items-center.border-theme-gray.border-bottom.me-md-4
         if message.name !== null
           p.fw-bold.text-dark.mb-1= message.name
         p.mb-2(class= message.color)= message.text
-        p.opacity-60.small.border-theme-gray.border-top.pt-1.mb-0(class= message.color)= message.time
+        p.opacity-60.small.border-top.pt-1.mb-0(class= message.color)= message.time

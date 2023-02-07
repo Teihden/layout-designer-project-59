@@ -4,21 +4,21 @@
 @import "../../node_modules/bootstrap/scss/functions";
 
 // Custom variables
-@import "custom-variables";
+@import "variables";
 
 // Required Bootstrap variables
 @import "../../node_modules/bootstrap/scss/variables";
 
 // Custom setups
-@import "custom-setups";
+@import "setups";
 
 // Required Bootstrap components
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 
-// Custom-mixins
-@import "custom-mixins";
+// Custom mixins
+@import "mixins/hide-scrollbar";
 
 // Optional Bootstrap components
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -35,7 +35,10 @@
 @import "../../node_modules/bootstrap/scss/helpers";
 
 // Custom utilites
-@import "custom-utilities";
+@import "utilities/borders";
+@import "utilities/colors";
+@import "utilities/opacity";
+@import "utilities/radii";
 
 // Bootstrap utilities API
 @import "../../node_modules/bootstrap/scss/utilities/api";
@@ -44,4 +47,6 @@
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // Custom styles
-@import "custom-main";
+@import "general";
+@import "components/page-header";
+@import "components/current-chat";

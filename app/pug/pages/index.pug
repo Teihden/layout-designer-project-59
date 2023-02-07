@@ -10,6 +10,10 @@
 //- Подключение mixins
 include ../includes/mixins.pug
 
+//- Подключение data
+include ../data/contacts-data.pug
+include ../data/chats-data.pug
+
 doctype html
 html.h-100(lang="ru")
 
@@ -19,7 +23,7 @@ html.h-100(lang="ru")
   body.h-100.p-md-4
     .container-xxxl.rounded-md-4.bg-white.h-100.overflow-hidden
       .row.h-100
-        .col-sm-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.border-theme-gray.h-100
+        .col-sm-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.p-0.d-flex.flex-column.justify-content-between.justify-content-md-start.border-end.h-100
 
           //- Подключение page-header
           include ../includes/page-header.pug

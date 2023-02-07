@@ -15,7 +15,7 @@ const browserSyncJob = () => {
     open: false
   });
 
-  watch("app/scss/**/*.scss", series(lintBuildSass, purgeCSS, postCSS));
+  watch("app/scss/**/*.scss", series(lintBuildSass));
   watch("app/pug/**/*.pug", series(lintPug, buildPug));
   watch("node_modules/bootstrap/dist/js/bootstrap.min.js", copyBootstrapJS);
   watch("node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2", copyBootstrapIcons);
@@ -33,26 +33,26 @@ const lintBuildSass = () => {
       fix: true
     }))
     .pipe(sass({
-      outputStyle: "expanded" // compressed | expanded
+      outputStyle: "compressed" // compressed | expanded
     }))
-    .pipe(dest("app/css/"));
+    .pipe(dest("build/css/"));
 };
 
 const purgeCSS = () => {
   console.log("запуск PurgeCSS");
 
-  return src("app/css/*.css")
+  return src("build/css/*.css")
     .pipe(purgecss({
       content: ["build/*.html"],
       variables: true
     }))
-    .pipe(dest("app/css"));
+    .pipe(dest("build/css"));
 };
 
 const postCSS = () => {
   console.log("запуск Autoprefixer");
 
-  return src("app/css/*.css")
+  return src("build/css/*.css")
     .pipe(postcss([autoprefixer()]))
     .pipe(dest("build/css"))
     .pipe(browserSync.stream());
@@ -73,7 +73,7 @@ const buildPug = () => {
 
   return src("app/pug/pages/*.pug")
     .pipe(pug({
-      pretty: true, // null | true
+      pretty: null, // null | true
       doctype: "html"
     }))
     .pipe(dest("build/"))
@@ -103,4 +103,4 @@ exports.server = browserSyncJob;
 exports.build = parallel(series(lintPug, buildPug), series(lintBuildSass, purgeCSS, postCSS));
 exports.copy = parallel(copyBootstrapJS, copyBootstrapIcons);
 exports.deploy = deploySurge;
-exports.default = series(parallel(series(lintPug, buildPug), series(lintBuildSass, purgeCSS, postCSS)), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);
+exports.default = series(parallel(series(lintPug, buildPug), lintBuildSass), parallel(copyBootstrapJS, copyBootstrapIcons), browserSyncJob);

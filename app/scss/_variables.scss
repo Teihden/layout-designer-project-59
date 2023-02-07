@@ -7,8 +7,9 @@ $warning: #ffc107;
 $danger: #dc3545;
 $light: #fbfbfb;
 $dark: #343a40;
+$theme-gray: #efefef;
 $custom-colors: (
-  "theme-gray": #efefef,
+  "theme-gray": $theme-gray,
 );
 
 // Containers
@@ -20,6 +21,3 @@ $custom-container-max-widths: (
 $custom-grid-breakpoints: (
   "xxxl": 1600px,
 );
-
-// Bootstrap icons directory
-$bootstrap-icons-font-dir: "../fonts";

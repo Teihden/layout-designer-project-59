@@ -36,7 +36,7 @@ copy
 # Deploys directory `build/` to Surge
 deploy
 
-# Runs pug-lint, Pug, Stylelint, Sass, PurgeCSS, Autoprefixer, copy Bootstrap files (icons, JS),
+# Runs pug-lint, Pug, Stylelint, Sass, copy Bootstrap files (icons, JS),
 # starts Browsersync server in sequential order and wathes for changes
 default
 ```

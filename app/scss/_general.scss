@@ -1,0 +1,15 @@
+.container-xxxl {
+  min-width: 350px;
+}
+
+.hide-scrollbar {
+  @include hide-scrollbar;
+}
+
+.tab-pane a:hover,
+.tab-pane a:focus,
+.tab-pane a:hover *,
+.tab-pane a:focus * {
+  color: $light !important;
+  background-color: $primary;
+}
